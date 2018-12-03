@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Annie's Parlour </title>
+    <link rel="shortcut icon" href="ADarkLogo.png">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            background: #2E2E3A;
+        }
+
+        .container {
+            position: relative;
+            margin: 0 auto;
+            width: 1440px;
+            height: 930px;
+            background-image: url("maltedmenu.png");
+            background-repeat: no-repeat;
+            background-size: 1440px;
+        }
+
+        /* LINK STYLING */
+        a:link {
+            color: #F2F2F2;
+            text-decoration: none;
+        }
+        a:visited {
+            color: #F2F2F2;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #68B6E5;
+            text-decoration: none;
+        }
+        a:active {
+            color: #68B6E5;
+            text-decoration: none;
+        }
+
+        /* NAVIGATION BAR */
+        .homenav {
+            position: relative;
+            width: 1440px;
+            height: 103px;
+            margin: 0 auto;
+            top: 20px;
+            background: #2E2E3A;
+            opacity: .5;
+            z-index: 1;
+        }
+        .annieslogo {
+            position: absolute;
+            width: 66px;
+            height: 66px;
+            margin-left: 30px;
+            margin-top: 20px;
+            z-index: 2;
+        }
+        .lochoursnav {
+            position: absolute;
+            left: 410px;
+            top: 44px;
+            font-family: "Avenir Next", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px;
+            font-size: 18px;
+            color: #F2F2F2;
+            z-index: 3;
+        }
+        .menunav {
+            position: absolute;
+            left: 285px;
+            top: 44px;
+            font-family: "Avenir Next", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            text-decoration: none;
+            line-height: 21px;
+            font-size: 20px;
+            text-align: center;
+            color: #F2F2F2;
+            z-index: 4;
+        }
+        .contactnav {
+            position: absolute;
+            left: 135px;
+            top: 44px;
+            font-family: "Avenir Next", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px;
+            font-size: 20px;
+            text-align: center;
+            color: #F2F2F2;
+            z-index: 5;
+        }
+        .btn {
+            background-color: transparent;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            color: #68B6E5;
+        }
+
+        /* MENU BUTTON GROUP */
+
+        .btn-group button {
+            position: absolute;
+            background-color: #E6E6E6;
+            border: none;
+            color: #333333;
+            opacity: .8;
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            float: left; /* Float the buttons side by side */
+        }
+
+        .btn-group button:not(:last-child) {
+            border-right: none; /* Prevent double borders */
+        }
+
+        .btn-group button:hover {
+            background-color: #68B6E5;
+            opacity: .7;
+        }
+
+        .btn-text {
+            font-family: "Aglet Slab", sans-serif;
+            font-size: 22px;
+        }
+
+        .malted-btn {
+            margin-left: 630px;
+            top: 325px;
+        }
+        .lunch-btn {
+            margin-left: 500px;
+            top: 325px;
+        }
+        .dinner-btn {
+            margin-left: 363px;
+            top: 325px;
+        }
+        .kids-btn {
+            margin-left: 967px;
+            top: 325px;
+        }
+        .drinks-btn {
+            margin-left: 832px;
+            top: 325px;
+        }
+        #active-btn {
+            background-color: #68B6E5;
+            color: #FFFFFF;
+        }
+
+        /* FOOTER */
+        .footercontact {
+            position: relative;
+            width: 720px;
+            height: 121px;
+            margin-left: 0;
+            margin-top: 824px;
+            background: #2E2E3A;
+        }
+        .footerright {
+            position: relative;
+            width: 720px;
+            height: 121px;
+            margin-left: 720px;
+            margin-top: -121px;
+            background: #2E2E3A;
+        }
+        .jobscontact {
+            padding-top: 30px;
+            font-family: "Helvetica Neue", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            font-size: 12px;
+            color: #F2F2F2;
+        }
+        .footerlogo {
+            width: 86px;
+            height: 86px;
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+        }
+        .sundaythursday {
+            font-family: "Helvetica Neue", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            font-size: 12px;
+            text-align: right;
+            color: #F2F2F2;
+        }
+        .frisat {
+            font-family: "Helvetica Neue", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            font-size: 12px;
+            text-align: right;
+            color: #F2F2F2;
+        }
+        .footerphone {
+            font-family: "Helvetica Neue", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            font-size: 12px;
+            text-align: right;
+            color: #68B6E5;
+        }
+        .footeraddress {
+            font-family: "Helvetica Neue", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            font-size: 12px;
+            text-align: right;
+            color: #68B6E5;
+        }
+        .info_left {
+            width: 50px;
+            height: 110px;
+            margin-left: 130px;
+        }
+        .info_right {
+            margin-right: 80px;
+            padding-top: 20px;
+        }
+        #padding {
+            padding-top: 5px;
+        }
+
+    </style>
+
+</head>
+
+<!--<body class="background">-->
+
+<div class="container"> <!--container-->
+
+    <div class="homenav"> <!--nav menu-->
+        <p>
+            <a href="index.html">
+                <img class="annieslogo" src="ADarkLogo.png"></a>
+        </p>
+        <a class="lochoursnav btn" href="index_location.html">LOCATION & HOURS</a>
+        <a class="menunav btn" href="index_menu_burger.html">MENU</a>
+        <a class="contactnav btn" href="index_contact.html">CONTACT</a>
+    </div> <!--end nav menu-->
+
+    <div class="btn-group">
+        <p>
+            <a href="index_menu_icecream.html">
+            <button class="btn-text dinner-btn">dinner</button>
+        </p><a/>
+        <button class="btn-text lunch-btn">lunch</button>
+        <button class="btn-text malted-btn" id="active-btn">malted milks</button>
+        <button class="btn-text drinks-btn">drinks</button>
+        <button class="btn-text kids-btn">kids</button>
+
+    </div>
+
+
+    <!--footer-->  <div class="footercontact"> <!--footer-->
+        <div><img src="ADarkLogo.png" class="footerlogo"></div>
+        <p class="jobscontact info_left">JOBS<br><a href="index_contact.html">CONTACT</a><br><a href="index_location.html">HOURS</a><br><a href="index_menu_burger.html">MENU</a></p>
+    </div>
+    <div class="footerright">
+        <p class="sundaythursday info_right">SUNDAY-THURSDAY<span style="color: #68B6E5;">11AM-11PM</span></p>
+        <p class="frisat info_right" id="padding">FRIDAY-SATURDAY<span style="color: #68B6E5;">11AM-12AM</span></p>
+        <p class="footerphone info_right" id="padding">(612)-379-0744</p>
+        <p class="footeraddress info_right" id="padding">313 14th Ave SE, Minneapolis</p>
+    </div> <!--end footer-->
+
+</div> <!--end container-->
+</body>
+</html>
